@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="XSS,JavaScript," />
 
 
 
@@ -93,16 +93,19 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Web安全-XSS 具备JavaScript开发能力  了解HTTP，Cookie，Ajax等基本常识 XSS的定义  XSS的攻击方式 反射型  发出请求时，XSS代码出现在URL中，作为输入提交到服务器端，服务器端解析后响应，XSS代码随响应内容一起传回给浏览器，最后浏览器解析执行XSS代码。这个过程像一次反射，故叫反射型XSS。  储存型  存储型XSS和反射型XSS的差别仅在于，提交的代码">
+<meta name="keywords" content="XSS,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/06/24/hello-world/index.html">
+<meta property="og:title" content="Web安全-XSS">
+<meta property="og:url" content="http://yoursite.com/2017/06/25/Web安全-XSS/index.html">
 <meta property="og:site_name" content="单纯的土豆">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-06-24T14:13:52.000Z">
+<meta property="og:description" content="Web安全-XSS 具备JavaScript开发能力  了解HTTP，Cookie，Ajax等基本常识 XSS的定义  XSS的攻击方式 反射型  发出请求时，XSS代码出现在URL中，作为输入提交到服务器端，服务器端解析后响应，XSS代码随响应内容一起传回给浏览器，最后浏览器解析执行XSS代码。这个过程像一次反射，故叫反射型XSS。  储存型  存储型XSS和反射型XSS的差别仅在于，提交的代码">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/04/11/58ec7e7a7975b.png">
+<meta property="og:updated_time" content="2017-06-25T04:40:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Web安全-XSS">
+<meta name="twitter:description" content="Web安全-XSS 具备JavaScript开发能力  了解HTTP，Cookie，Ajax等基本常识 XSS的定义  XSS的攻击方式 反射型  发出请求时，XSS代码出现在URL中，作为输入提交到服务器端，服务器端解析后响应，XSS代码随响应内容一起传回给浏览器，最后浏览器解析执行XSS代码。这个过程像一次反射，故叫反射型XSS。  储存型  存储型XSS和反射型XSS的差别仅在于，提交的代码">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/04/11/58ec7e7a7975b.png">
 
 
 
@@ -130,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/24/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/25/Web安全-XSS/"/>
 
 
 
 
 
-  <title>Hello World | 单纯的土豆</title>
+  <title>Web安全-XSS | 单纯的土豆</title>
   
 
 
@@ -275,7 +278,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/24/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/25/Web安全-XSS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liqilong">
@@ -292,7 +295,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Web安全-XSS</h1>
         
 
         <div class="post-meta">
@@ -304,8 +307,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-24T22:13:52+08:00">
-                2017-06-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T12:38:42+08:00">
+                2017-06-25
               </time>
             
 
@@ -314,6 +317,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Web安全/" itemprop="url" rel="index">
+                    <span itemprop="name">Web安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -339,15 +364,43 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="Web安全-XSS"><a href="#Web安全-XSS" class="headerlink" title="Web安全-XSS"></a>Web安全-XSS</h1><ul>
+<li><p>具备JavaScript开发能力</p>
+</li>
+<li><p>了解HTTP，Cookie，Ajax等基本常识</p>
+<h2 id="XSS的定义"><a href="#XSS的定义" class="headerlink" title="XSS的定义"></a>XSS的定义</h2></li>
+</ul>
+<h3 id="XSS的攻击方式"><a href="#XSS的攻击方式" class="headerlink" title="XSS的攻击方式"></a>XSS的攻击方式</h3><ul>
+<li>反射型</li>
+</ul>
+<p>发出请求时，XSS代码出现在URL中，作为输入提交到服务器端，服务器端解析后响应，XSS代码随响应内容一起传回给浏览器，最后浏览器解析执行XSS代码。这个过程像一次反射，故叫反射型XSS。</p>
+<ul>
+<li>储存型</li>
+</ul>
+<p>存储型XSS和反射型XSS的差别仅在于，提交的代码会存储在服务器端（数据库，内存，文件系统等），下次请求目标页面时不用再提交XSS代码。</p>
+<h2 id="XSS的防御措施"><a href="#XSS的防御措施" class="headerlink" title="XSS的防御措施"></a>XSS的防御措施</h2><ul>
+<li>编码</li>
+</ul>
+<p>对用户输入的数据进行HTML Entity编码</p>
+<p><img src="https://ooo.0o0.ooo/2017/04/11/58ec7e7a7975b.png" alt="11111.png"></p>
+<ul>
+<li><p>过滤</p>
+<ul>
+<li>移除用户上传的DOM属性，如onerror等</li>
+<li>移除用户上传的Style节点，Script节点，Iframe节点等</li>
+</ul>
+</li>
+<li>校正<ul>
+<li>避免直接对HTML Entity解码</li>
+<li>使用DOM Parse转换，校正不配对的DOM标签</li>
+</ul>
+</li>
+</ul>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>通过构建Node服务和建立一个评论功能，实例演示XSS的攻击及预防</p>
+<h3 id="XSS的防范措施"><a href="#XSS的防范措施" class="headerlink" title="XSS的防范措施"></a>XSS的防范措施</h3><ul>
+<li>反转义，DOM Parse</li>
+<li>过滤，校正</li>
+</ul>
 
       
     </div>
@@ -375,6 +428,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/XSS/" rel="tag"># XSS</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
 
       
       
@@ -384,15 +445,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/25/SEO在网页制作中的应用/" rel="next" title="SEO在网页制作中的应用">
+                <i class="fa fa-chevron-left"></i> SEO在网页制作中的应用
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/25/git使用中的总结/" rel="prev" title="git使用中的总结">
-                git使用中的总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -521,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Web安全-XSS"><span class="nav-number">1.</span> <span class="nav-text">Web安全-XSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS的定义"><span class="nav-number">1.1.</span> <span class="nav-text">XSS的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS的攻击方式"><span class="nav-number">1.1.1.</span> <span class="nav-text">XSS的攻击方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS的防御措施"><span class="nav-number">1.2.</span> <span class="nav-text">XSS的防御措施</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战"><span class="nav-number">1.3.</span> <span class="nav-text">实战</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS的防范措施"><span class="nav-number">1.3.1.</span> <span class="nav-text">XSS的防范措施</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
