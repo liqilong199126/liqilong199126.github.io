@@ -100,15 +100,19 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/04/Vue项目构建总结/index.html">
 <meta property="og:site_name" content="单纯的土豆">
 <meta property="og:description" content="构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建  vu">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f22288dfc.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f223718d7.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f22343383.jpg">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f223440ec.jpg">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f223872b2.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358dfbab05.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358e00add1.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358dfeab09.png">
-<meta property="og:updated_time" content="2017-07-03T23:09:14.000Z">
+<meta property="og:updated_time" content="2017-07-03T23:15:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue项目构建总结">
 <meta name="twitter:description" content="构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建  vu">
-<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/07/03/5959f223718d7.png">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/07/03/5959f22288dfc.png">
 
 
 
@@ -384,23 +388,68 @@
 <li>自定义构建</li>
 </ul>
 <h2 id="vue-cli构建"><a href="#vue-cli构建" class="headerlink" title="vue-cli构建"></a>vue-cli构建</h2><p>但因为国内网络原因，使用 npm 安装某些模块会非常慢。好在淘宝提供了 npm 镜像供我们使用。</p>
-<h4 id="安装-cnpm"><a href="#安装-cnpm" class="headerlink" title="安装 cnpm"></a>安装 cnpm</h4><p>在命令行输入：</p>
-<figure class="highlight plain"><figcaption><span>install -g cnpm --registry=https://registry.npm.taobao.org```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### 使用 cnpm 安装模块</div></pre></td></tr></table></figure>
-<p>cnpm install [name]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">如果你使用vue-cli脚手架来构建vue项目，那么你只需敲击下面几行命令即可生成一个简单的vue项目（前提安装node.js）：</div><div class="line">安装vue-cli之前，需要先装好vue 和 webpack</div><div class="line"></div><div class="line"></div><div class="line">```npm install -g vue       //全局安装vue  也可省略</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><figcaption><span>install -g webpack</span><a href="//全局安装webpack">```</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```npm install -g vue-cli   //全局安装vue-cli</div></pre></td></tr></table></figure>
+<ol>
+<li>安装 cnpm</li>
+</ol>
+<p>在命令行输入：</p>
+<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
+<ol>
+<li>使用 cnpm 安装模块</li>
+</ol>
+<p>cnpm install [name]</p>
+<p>如果你使用vue-cli脚手架来构建vue项目，那么你只需敲击下面几行命令即可生成一个简单的vue项目（前提安装node.js）：<br>安装vue-cli之前，需要先装好vue 和 webpack</p>
+<p>npm install -g vue       //全局安装vue  也可省略</p>
+<p>npm install -g webpack   //全局安装webpack</p>
+<p>npm install -g vue-cli   //全局安装vue-cli</p>
 <p><strong>注意</strong>：上面这些装过一次之后都不需要再安装了</p>
-<h4 id="使用vue-cli构建vue项目"><a href="#使用vue-cli构建vue项目" class="headerlink" title="使用vue-cli构建vue项目"></a>使用vue-cli构建vue项目</h4><figure class="highlight plain"><figcaption><span>init webpack my-project```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">```cd my-project</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>install```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">这样子项目就安装完了,生成文件如下</div><div class="line"></div><div class="line">![111.png](https://ooo.0o0.ooo/2017/07/03/5959f22288dfc.png)</div><div class="line"></div><div class="line">然后执行</div><div class="line"></div><div class="line">```npm run dev</div></pre></td></tr></table></figure>
+<ol>
+<li>使用vue-cli构建vue项目</li>
+</ol>
+<p>vue init webpack my-project</p>
+<p>cd my-project</p>
+<p>npm install</p>
+<p>这样子项目就安装完了,生成文件如下</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/03/5959f22288dfc.png" alt="111.png"></p>
+<p>然后执行</p>
+<p>npm run dev</p>
 <p>在浏览器打开<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>，则可以看到欢迎页了。看到这个就说明一切顺利</p>
 <p><img src="https://ooo.0o0.ooo/2017/07/03/5959f223718d7.png" alt="222.png"></p>
-<h4 id="vue-cli生成环境"><a href="#vue-cli生成环境" class="headerlink" title="vue-cli生成环境"></a>vue-cli生成环境</h4><p>但是这个只能在本地跑，要如何在我们自己的服务器上访问呢？此时需要执行</p>
-<figure class="highlight plain"><figcaption><span>run build```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">会生成静态文件，在**根目录**的```dist```里，里面有个```index.html```，这是服务器访问的路径指定到这里就可以访问我们自己的项目了。</div><div class="line"></div><div class="line">但是呢！！</div><div class="line"></div><div class="line">把```index.html```和```static```上传到服务器的时候，```index.html```和```static```需要一起放到根目录下，这样就可以通过[http://www.omwteam.com/index.html](http://www.omwteam.com/index.html)了。</div><div class="line"></div><div class="line">如果你想把整个```dist```文件夹传上去，通过[http://www.omwteam.com/dist/index.html](http://www.omwteam.com/dist/index.html),你会发现，引用的css和js路径都是错误的，那么怎么解决呢？这时候就需要自己修改一下配置了。</div><div class="line"></div><div class="line">进入```config/index.js</div></pre></td></tr></table></figure>
+<ol>
+<li>vue-cli生成环境</li>
+</ol>
+<p>但是这个只能在本地跑，要如何在我们自己的服务器上访问呢？此时需要执行</p>
+<p>npm run build</p>
+<p>会生成静态文件，在<strong>根目录</strong>的dist里，里面有个index.html，这是服务器访问的路径指定到这里就可以访问我们自己的项目了。</p>
+<p>但是呢！！</p>
+<p>把index.html和static上传到服务器的时候，index.html和static需要一起放到根目录下，这样就可以通过<a href="http://www.omwteam.com/index.html" target="_blank" rel="external">http://www.omwteam.com/index.html</a>了。</p>
+<p>如果你想把整个dist文件夹传上去，通过<a href="http://www.omwteam.com/dist/index.html" target="_blank" rel="external">http://www.omwteam.com/dist/index.html</a>,你会发现，引用的css和js路径都是错误的，那么怎么解决呢？这时候就需要自己修改一下配置了。</p>
+<p>进入config/index.js</p>
 <p>原来的配置的引用路径为</p>
 <p><img src="https://ooo.0o0.ooo/2017/07/03/5959f22343383.jpg" alt="333.jpg"></p>
 <p>我自己更改为</p>
 <p><img src="https://ooo.0o0.ooo/2017/07/03/5959f223440ec.jpg" alt="444.jpg"></p>
 <p>然后重新构建一下：</p>
-<figure class="highlight plain"><figcaption><span>run build```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">这样就能正常访问了。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### vue-cli开发环境 关于Cannot GET /的问题</div><div class="line"></div><div class="line">　　针对开发环境需要注意，一定不要去改```asssetsPublicPath```里面的内容，也就是这个地方是**不要加点 改成当前目录**的；否则会出Cannot GET 找不到页面的问题；</div><div class="line"></div><div class="line">![555.png](https://ooo.0o0.ooo/2017/07/03/5959f223872b2.png)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">这样的构建方式**其实并不适用于所有项目**，很多文件你的项目可能都不会用到，并且如果你对自动生成的文件一无所知，那么后期维护起来也会非常的吃力。所以这里不推荐新手使用vue-cli构建，而是推荐大家参考vue-cli生成的文件**从零开始构建一个vue项目**。</div><div class="line"></div><div class="line">## 自定义构建</div><div class="line">相比vue-cli构建，自定义构建就显得灵活得多，但是它**需要你了解构建的步骤和原理**，要求也就随之提高了。自定义构建分为以下几步：</div><div class="line"></div><div class="line">- 文件/文件夹创建</div><div class="line">- package.json文件创建</div><div class="line">- webpack配置文件创建</div><div class="line">- 入口文件创建</div><div class="line">- vue组件编写</div><div class="line">- 路由配置</div><div class="line"></div><div class="line">![1111.png](https://ooo.0o0.ooo/2017/06/28/595358dfbab05.png)</div><div class="line"></div><div class="line">### 1. 文件/文件夹创建</div><div class="line">![222.png](https://ooo.0o0.ooo/2017/06/28/595358e00add1.png)</div><div class="line">### 2. package.json文件</div><div class="line"></div><div class="line">使用下方命令，我们可以快速创建一个**package.json**文件：</div><div class="line"></div><div class="line"></div><div class="line">```npm init -y</div></pre></td></tr></table></figure>
+<p>npm run build</p>
+<p>这样就能正常访问了。</p>
+<ol>
+<li>vue-cli开发环境 关于Cannot GET /的问题</li>
+</ol>
+<p>　　针对开发环境需要注意，一定不要去改asssetsPublicPath里面的内容，也就是这个地方是<strong>不要加点 改成当前目录</strong>的；否则会出Cannot GET 找不到页面的问题；</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/03/5959f223872b2.png" alt="555.png"></p>
+<p>这样的构建方式<strong>其实并不适用于所有项目</strong>，很多文件你的项目可能都不会用到，并且如果你对自动生成的文件一无所知，那么后期维护起来也会非常的吃力。所以这里不推荐新手使用vue-cli构建，而是推荐大家参考vue-cli生成的文件<strong>从零开始构建一个vue项目</strong>。</p>
+<h2 id="自定义构建"><a href="#自定义构建" class="headerlink" title="自定义构建"></a>自定义构建</h2><p>相比vue-cli构建，自定义构建就显得灵活得多，但是它<strong>需要你了解构建的步骤和原理</strong>，要求也就随之提高了。自定义构建分为以下几步：</p>
+<ul>
+<li>文件/文件夹创建</li>
+<li>package.json文件创建</li>
+<li>webpack配置文件创建</li>
+<li>入口文件创建</li>
+<li>vue组件编写</li>
+<li>路由配置</li>
+</ul>
+<p><img src="https://ooo.0o0.ooo/2017/06/28/595358dfbab05.png" alt="1111.png"></p>
+<h3 id="1-文件-文件夹创建"><a href="#1-文件-文件夹创建" class="headerlink" title="1. 文件/文件夹创建"></a>1. 文件/文件夹创建</h3><p><img src="https://ooo.0o0.ooo/2017/06/28/595358e00add1.png" alt="222.png"></p>
+<h3 id="2-package-json文件"><a href="#2-package-json文件" class="headerlink" title="2. package.json文件"></a>2. package.json文件</h3><p>使用下方命令，我们可以快速创建一个<strong>package.json</strong>文件：</p>
+<p>npm init -y</p>
 <p>然后修改其<strong>scripts</strong>配置项，添加<strong>打包压缩命令</strong>，并且增加<strong>dependencies依赖项</strong>，添加项目相应依赖，这里我们主要依赖了<strong>vue</strong>和<strong>vue-router</strong>（完整package.json配置文件见最后实例源码）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line"></div><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">    &quot;build&quot;: &quot;rimraf dist &amp;&amp; cross-env NODE_ENV=prod&amp;&amp;webpack -p --config ./webpack.config.js&quot;</div><div class="line">&#125;,</div><div class="line">&quot;dependencies&quot;: &#123;</div><div class="line">    &quot;vue&quot;: &quot;^2.3.4&quot;,</div><div class="line">    &quot;vue-router&quot;: &quot;^2.5.3&quot;</div><div class="line">&#125;</div><div class="line"></div><div class="line">...</div></pre></td></tr></table></figure>
 <h3 id="3-webpack配置文件"><a href="#3-webpack配置文件" class="headerlink" title="3. webpack配置文件"></a>3. webpack配置文件</h3><p>其次我们需要创建我们的<strong>webpack配置文件</strong>，这里和构建其他项目不同的是，vue单文件组件需要使用<strong>vue-loader加载器</strong>进行加载，同时使用<strong>babel-loader</strong>进行ES6语法的转换（完整 webpack 配置文件见最后实例源码）：</p>
@@ -604,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建vue项目的分类"><span class="nav-number">1.</span> <span class="nav-text">构建vue项目的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-直接引入vue-js文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.直接引入vue.js文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用vue单文件组件"><span class="nav-number">1.2.</span> <span class="nav-text">2.使用vue单文件组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建工具与方法"><span class="nav-number">2.</span> <span class="nav-text">构建工具与方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-构建工具"><span class="nav-number">2.1.</span> <span class="nav-text">1.构建工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-构建方法"><span class="nav-number">2.2.</span> <span class="nav-text">2.构建方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-cli构建"><span class="nav-number">3.</span> <span class="nav-text">vue-cli构建</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-cnpm"><span class="nav-number">3.0.1.</span> <span class="nav-text">安装 cnpm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用vue-cli构建vue项目"><span class="nav-number">3.0.2.</span> <span class="nav-text">使用vue-cli构建vue项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-cli生成环境"><span class="nav-number">3.0.3.</span> <span class="nav-text">vue-cli生成环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-webpack配置文件"><span class="nav-number">3.1.</span> <span class="nav-text">3. webpack配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-入口文件"><span class="nav-number">3.2.</span> <span class="nav-text">4. 入口文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-vue组件编写"><span class="nav-number">3.3.</span> <span class="nav-text">5. vue组件编写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-路由配置"><span class="nav-number">3.4.</span> <span class="nav-text">6. 路由配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-热加载"><span class="nav-number">3.5.</span> <span class="nav-text">7. 热加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-注意事项"><span class="nav-number">3.6.</span> <span class="nav-text">8. 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目实例"><span class="nav-number">4.</span> <span class="nav-text">项目实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建vue项目的分类"><span class="nav-number">1.</span> <span class="nav-text">构建vue项目的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-直接引入vue-js文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.直接引入vue.js文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用vue单文件组件"><span class="nav-number">1.2.</span> <span class="nav-text">2.使用vue单文件组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建工具与方法"><span class="nav-number">2.</span> <span class="nav-text">构建工具与方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-构建工具"><span class="nav-number">2.1.</span> <span class="nav-text">1.构建工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-构建方法"><span class="nav-number">2.2.</span> <span class="nav-text">2.构建方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-cli构建"><span class="nav-number">3.</span> <span class="nav-text">vue-cli构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义构建"><span class="nav-number">4.</span> <span class="nav-text">自定义构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-文件-文件夹创建"><span class="nav-number">4.1.</span> <span class="nav-text">1. 文件/文件夹创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-package-json文件"><span class="nav-number">4.2.</span> <span class="nav-text">2. package.json文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-webpack配置文件"><span class="nav-number">4.3.</span> <span class="nav-text">3. webpack配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-入口文件"><span class="nav-number">4.4.</span> <span class="nav-text">4. 入口文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-vue组件编写"><span class="nav-number">4.5.</span> <span class="nav-text">5. vue组件编写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-路由配置"><span class="nav-number">4.6.</span> <span class="nav-text">6. 路由配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-热加载"><span class="nav-number">4.7.</span> <span class="nav-text">7. 热加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-注意事项"><span class="nav-number">4.8.</span> <span class="nav-text">8. 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目实例"><span class="nav-number">5.</span> <span class="nav-text">项目实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
