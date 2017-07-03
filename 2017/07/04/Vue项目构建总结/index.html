@@ -93,13 +93,13 @@
 
 
 
-<meta name="description" content="构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建  vu">
+<meta name="description" content="一.构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  二.构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建">
 <meta name="keywords" content="vue.js,框架">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue项目构建总结">
 <meta property="og:url" content="http://yoursite.com/2017/07/04/Vue项目构建总结/index.html">
 <meta property="og:site_name" content="单纯的土豆">
-<meta property="og:description" content="构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建  vu">
+<meta property="og:description" content="一.构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  二.构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f22288dfc.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f223718d7.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/03/5959f22343383.jpg">
@@ -108,10 +108,10 @@
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358dfbab05.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358e00add1.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358dfeab09.png">
-<meta property="og:updated_time" content="2017-07-03T23:20:44.000Z">
+<meta property="og:updated_time" content="2017-07-03T23:24:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue项目构建总结">
-<meta name="twitter:description" content="构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建  vu">
+<meta name="twitter:description" content="一.构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  二.构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建">
 <meta name="twitter:image" content="https://ooo.0o0.ooo/2017/07/03/5959f22288dfc.png">
 
 
@@ -371,7 +371,7 @@
       
 
       
-        <h2 id="构建vue项目的分类"><a href="#构建vue项目的分类" class="headerlink" title="构建vue项目的分类"></a>构建vue项目的分类</h2><h3 id="1-直接引入vue-js文件"><a href="#1-直接引入vue-js文件" class="headerlink" title="1.直接引入vue.js文件"></a>1.直接引入vue.js文件</h3><ul>
+        <h2 id="一-构建vue项目的分类"><a href="#一-构建vue项目的分类" class="headerlink" title="一.构建vue项目的分类"></a>一.构建vue项目的分类</h2><h3 id="1-直接引入vue-js文件"><a href="#1-直接引入vue-js文件" class="headerlink" title="1.直接引入vue.js文件"></a>1.直接引入vue.js文件</h3><ul>
 <li>全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮…</li>
 <li>一般主要用于初级用户和小型项目</li>
 </ul>
@@ -379,7 +379,7 @@
 <li>完整语法高亮, CommonJS模块,组件化的CSS</li>
 <li>适用于大型项目</li>
 </ul>
-<h2 id="构建工具与方法"><a href="#构建工具与方法" class="headerlink" title="构建工具与方法"></a>构建工具与方法</h2><h3 id="1-构建工具"><a href="#1-构建工具" class="headerlink" title="1.构建工具"></a>1.构建工具</h3><ul>
+<h2 id="二-构建工具与方法"><a href="#二-构建工具与方法" class="headerlink" title="二.构建工具与方法"></a>二.构建工具与方法</h2><h3 id="1-构建工具"><a href="#1-构建工具" class="headerlink" title="1.构建工具"></a>1.构建工具</h3><ul>
 <li>webpack</li>
 <li>browserify</li>
 </ul>
@@ -387,16 +387,16 @@
 <li>vue-cli脚手架</li>
 <li>自定义构建</li>
 </ul>
-<h2 id="vue-cli构建"><a href="#vue-cli构建" class="headerlink" title="vue-cli构建"></a>vue-cli构建</h2><p>但因为国内网络原因，使用 npm 安装某些模块会非常慢。好在淘宝提供了 npm 镜像供我们使用。</p>
-<h3 id="安装-cnpm"><a href="#安装-cnpm" class="headerlink" title="安装 cnpm"></a>安装 cnpm</h3><p>在命令行输入：</p>
+<h2 id="三-vue-cli构建"><a href="#三-vue-cli构建" class="headerlink" title="三.vue-cli构建"></a>三.vue-cli构建</h2><p>但因为国内网络原因，使用 npm 安装某些模块会非常慢。好在淘宝提供了 npm 镜像供我们使用。</p>
+<h3 id="1-安装-cnpm"><a href="#1-安装-cnpm" class="headerlink" title="1.安装 cnpm"></a>1.安装 cnpm</h3><p>在命令行输入：</p>
 <p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
-<h3 id="使用-cnpm-安装模块"><a href="#使用-cnpm-安装模块" class="headerlink" title="使用 cnpm 安装模块"></a>使用 cnpm 安装模块</h3><p>cnpm install [name]</p>
+<h3 id="2-使用-cnpm-安装模块"><a href="#2-使用-cnpm-安装模块" class="headerlink" title="2.使用 cnpm 安装模块"></a>2.使用 cnpm 安装模块</h3><p>cnpm install [name]</p>
 <p>如果你使用vue-cli脚手架来构建vue项目，那么你只需敲击下面几行命令即可生成一个简单的vue项目（前提安装node.js）：<br>安装vue-cli之前，需要先装好vue 和 webpack</p>
 <p>npm install -g vue       //全局安装vue  也可省略</p>
 <p>npm install -g webpack   //全局安装webpack</p>
 <p>npm install -g vue-cli   //全局安装vue-cli</p>
 <p><strong>注意</strong>：上面这些装过一次之后都不需要再安装了</p>
-<h3 id="使用vue-cli构建vue项目"><a href="#使用vue-cli构建vue项目" class="headerlink" title="使用vue-cli构建vue项目"></a>使用vue-cli构建vue项目</h3><p>vue init webpack my-project</p>
+<h3 id="3-使用vue-cli构建vue项目"><a href="#3-使用vue-cli构建vue项目" class="headerlink" title="3.使用vue-cli构建vue项目"></a>3.使用vue-cli构建vue项目</h3><p>vue init webpack my-project</p>
 <p>cd my-project</p>
 <p>npm install</p>
 <p>这样子项目就安装完了,生成文件如下</p>
@@ -405,7 +405,7 @@
 <p>npm run dev</p>
 <p>在浏览器打开<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>，则可以看到欢迎页了。看到这个就说明一切顺利</p>
 <p><img src="https://ooo.0o0.ooo/2017/07/03/5959f223718d7.png" alt="222.png"></p>
-<h3 id="vue-cli生成环境"><a href="#vue-cli生成环境" class="headerlink" title="vue-cli生成环境"></a>vue-cli生成环境</h3><p>但是这个只能在本地跑，要如何在我们自己的服务器上访问呢？此时需要执行</p>
+<h4 id="4-vue-cli生成环境"><a href="#4-vue-cli生成环境" class="headerlink" title="4.vue-cli生成环境"></a>4.vue-cli生成环境</h4><p>但是这个只能在本地跑，要如何在我们自己的服务器上访问呢？此时需要执行</p>
 <p>npm run build</p>
 <p>会生成静态文件，在<strong>根目录</strong>的dist里，里面有个index.html，这是服务器访问的路径指定到这里就可以访问我们自己的项目了。</p>
 <p>但是呢！！</p>
@@ -419,10 +419,10 @@
 <p>然后重新构建一下：</p>
 <p>npm run build</p>
 <p>这样就能正常访问了。</p>
-<h3 id="vue-cli开发环境-关于Cannot-GET-的问题"><a href="#vue-cli开发环境-关于Cannot-GET-的问题" class="headerlink" title="vue-cli开发环境 关于Cannot GET /的问题"></a>vue-cli开发环境 关于Cannot GET /的问题</h3><p>　　针对开发环境需要注意，一定不要去改asssetsPublicPath里面的内容，也就是这个地方是<strong>不要加点 改成当前目录</strong>的；否则会出Cannot GET 找不到页面的问题；</p>
+<h3 id="5-vue-cli开发环境-关于Cannot-GET-的问题"><a href="#5-vue-cli开发环境-关于Cannot-GET-的问题" class="headerlink" title="5.vue-cli开发环境 关于Cannot GET /的问题"></a>5.vue-cli开发环境 关于Cannot GET /的问题</h3><p>　　针对开发环境需要注意，一定不要去改asssetsPublicPath里面的内容，也就是这个地方是<strong>不要加点 改成当前目录</strong>的；否则会出Cannot GET 找不到页面的问题；</p>
 <p><img src="https://ooo.0o0.ooo/2017/07/03/5959f223872b2.png" alt="555.png"></p>
 <p>这样的构建方式<strong>其实并不适用于所有项目</strong>，很多文件你的项目可能都不会用到，并且如果你对自动生成的文件一无所知，那么后期维护起来也会非常的吃力。所以这里不推荐新手使用vue-cli构建，而是推荐大家参考vue-cli生成的文件<strong>从零开始构建一个vue项目</strong>。</p>
-<h2 id="自定义构建"><a href="#自定义构建" class="headerlink" title="自定义构建"></a>自定义构建</h2><p>相比vue-cli构建，自定义构建就显得灵活得多，但是它<strong>需要你了解构建的步骤和原理</strong>，要求也就随之提高了。自定义构建分为以下几步：</p>
+<h2 id="四-自定义构建"><a href="#四-自定义构建" class="headerlink" title="四.自定义构建"></a>四.自定义构建</h2><p>相比vue-cli构建，自定义构建就显得灵活得多，但是它<strong>需要你了解构建的步骤和原理</strong>，要求也就随之提高了。自定义构建分为以下几步：</p>
 <ul>
 <li>文件/文件夹创建</li>
 <li>package.json文件创建</li>
@@ -455,8 +455,8 @@
 <h3 id="8-注意事项"><a href="#8-注意事项" class="headerlink" title="8. 注意事项"></a>8. 注意事项</h3><p>完成上方步骤后其实还会存在一个问题，那就是我们的部分ES6代码无法获得解析，这里我们还需要添加<strong>babel的配置文件.babelrc</strong>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;presets&quot;: [</div><div class="line">    [&quot;env&quot;, &#123; &quot;modules&quot;: false &#125;],</div><div class="line">    &quot;stage-2&quot;</div><div class="line">  ],</div><div class="line">  &quot;plugins&quot;: [&quot;transform-runtime&quot;],</div><div class="line">  &quot;comments&quot;: false,</div><div class="line">  &quot;env&quot;: &#123;</div><div class="line">    &quot;test&quot;: &#123;</div><div class="line">      &quot;presets&quot;: [&quot;env&quot;, &quot;stage-2&quot;],</div><div class="line">      &quot;plugins&quot;: [ &quot;istanbul&quot; ]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这里我们使用了stage-2来处理ES6中对象无法使用…解构的问题，同时使用<strong>transform-runtime</strong>来优化我们的代码利用率。</p>
-<h2 id="项目实例"><a href="#项目实例" class="headerlink" title="项目实例"></a>项目实例</h2><p>上方只讲述了vue自定义构建的主要步骤和关键代码，详细代码实例可以参考：<a href="https://github.com/luozhihao/vue-setup-course" target="_blank" rel="external"><strong>https://github.com/luozhihao/vue-setup-course</strong></a></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.jianshu.com/p/7b6cf95b0cd5" target="_blank" rel="external">Vue 2.0 从初始化到编译打包发布</a></p>
+<h2 id="五-项目实例"><a href="#五-项目实例" class="headerlink" title="五.项目实例"></a>五.项目实例</h2><p>上方只讲述了vue自定义构建的主要步骤和关键代码，详细代码实例可以参考：<a href="https://github.com/luozhihao/vue-setup-course" target="_blank" rel="external"><strong>https://github.com/luozhihao/vue-setup-course</strong></a></p>
+<h2 id="六-参考"><a href="#六-参考" class="headerlink" title="六.参考"></a>六.参考</h2><p><a href="http://www.jianshu.com/p/7b6cf95b0cd5" target="_blank" rel="external">Vue 2.0 从初始化到编译打包发布</a></p>
 
       
     </div>
@@ -638,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建vue项目的分类"><span class="nav-number">1.</span> <span class="nav-text">构建vue项目的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-直接引入vue-js文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.直接引入vue.js文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用vue单文件组件"><span class="nav-number">1.2.</span> <span class="nav-text">2.使用vue单文件组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建工具与方法"><span class="nav-number">2.</span> <span class="nav-text">构建工具与方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-构建工具"><span class="nav-number">2.1.</span> <span class="nav-text">1.构建工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-构建方法"><span class="nav-number">2.2.</span> <span class="nav-text">2.构建方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue-cli构建"><span class="nav-number">3.</span> <span class="nav-text">vue-cli构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-cnpm"><span class="nav-number">3.1.</span> <span class="nav-text">安装 cnpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-cnpm-安装模块"><span class="nav-number">3.2.</span> <span class="nav-text">使用 cnpm 安装模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用vue-cli构建vue项目"><span class="nav-number">3.3.</span> <span class="nav-text">使用vue-cli构建vue项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-cli生成环境"><span class="nav-number">3.4.</span> <span class="nav-text">vue-cli生成环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-cli开发环境-关于Cannot-GET-的问题"><span class="nav-number">3.5.</span> <span class="nav-text">vue-cli开发环境 关于Cannot GET /的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义构建"><span class="nav-number">4.</span> <span class="nav-text">自定义构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-文件-文件夹创建"><span class="nav-number">4.1.</span> <span class="nav-text">1. 文件/文件夹创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-package-json文件"><span class="nav-number">4.2.</span> <span class="nav-text">2. package.json文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-webpack配置文件"><span class="nav-number">4.3.</span> <span class="nav-text">3. webpack配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-入口文件"><span class="nav-number">4.4.</span> <span class="nav-text">4. 入口文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-vue组件编写"><span class="nav-number">4.5.</span> <span class="nav-text">5. vue组件编写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-路由配置"><span class="nav-number">4.6.</span> <span class="nav-text">6. 路由配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-热加载"><span class="nav-number">4.7.</span> <span class="nav-text">7. 热加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-注意事项"><span class="nav-number">4.8.</span> <span class="nav-text">8. 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目实例"><span class="nav-number">5.</span> <span class="nav-text">项目实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-构建vue项目的分类"><span class="nav-number">1.</span> <span class="nav-text">一.构建vue项目的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-直接引入vue-js文件"><span class="nav-number">1.1.</span> <span class="nav-text">1.直接引入vue.js文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用vue单文件组件"><span class="nav-number">1.2.</span> <span class="nav-text">2.使用vue单文件组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-构建工具与方法"><span class="nav-number">2.</span> <span class="nav-text">二.构建工具与方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-构建工具"><span class="nav-number">2.1.</span> <span class="nav-text">1.构建工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-构建方法"><span class="nav-number">2.2.</span> <span class="nav-text">2.构建方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-vue-cli构建"><span class="nav-number">3.</span> <span class="nav-text">三.vue-cli构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装-cnpm"><span class="nav-number">3.1.</span> <span class="nav-text">1.安装 cnpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用-cnpm-安装模块"><span class="nav-number">3.2.</span> <span class="nav-text">2.使用 cnpm 安装模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-使用vue-cli构建vue项目"><span class="nav-number">3.3.</span> <span class="nav-text">3.使用vue-cli构建vue项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-vue-cli生成环境"><span class="nav-number">3.3.1.</span> <span class="nav-text">4.vue-cli生成环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-vue-cli开发环境-关于Cannot-GET-的问题"><span class="nav-number">3.4.</span> <span class="nav-text">5.vue-cli开发环境 关于Cannot GET /的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-自定义构建"><span class="nav-number">4.</span> <span class="nav-text">四.自定义构建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-文件-文件夹创建"><span class="nav-number">4.1.</span> <span class="nav-text">1. 文件/文件夹创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-package-json文件"><span class="nav-number">4.2.</span> <span class="nav-text">2. package.json文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-webpack配置文件"><span class="nav-number">4.3.</span> <span class="nav-text">3. webpack配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-入口文件"><span class="nav-number">4.4.</span> <span class="nav-text">4. 入口文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-vue组件编写"><span class="nav-number">4.5.</span> <span class="nav-text">5. vue组件编写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-路由配置"><span class="nav-number">4.6.</span> <span class="nav-text">6. 路由配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-热加载"><span class="nav-number">4.7.</span> <span class="nav-text">7. 热加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-注意事项"><span class="nav-number">4.8.</span> <span class="nav-text">8. 注意事项</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-项目实例"><span class="nav-number">5.</span> <span class="nav-text">五.项目实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-参考"><span class="nav-number">6.</span> <span class="nav-text">六.参考</span></a></li></ol></div>
             
 
           </div>
