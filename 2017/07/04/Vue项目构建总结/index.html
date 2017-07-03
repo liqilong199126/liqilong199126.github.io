@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358dfbab05.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358e00add1.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/06/28/595358dfeab09.png">
-<meta property="og:updated_time" content="2017-07-03T23:15:48.000Z">
+<meta property="og:updated_time" content="2017-07-03T23:18:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue项目构建总结">
 <meta name="twitter:description" content="构建vue项目的分类1.直接引入vue.js文件 全局定义组件，只能使用一些基础的API和局限的功能，不能使用预处理器，字符串模板缺乏语法高亮… 一般主要用于初级用户和小型项目  2.使用vue单文件组件 完整语法高亮, CommonJS模块,组件化的CSS 适用于大型项目  构建工具与方法1.构建工具 webpack browserify  2.构建方法 vue-cli脚手架 自定义构建  vu">
@@ -388,23 +388,17 @@
 <li>自定义构建</li>
 </ul>
 <h2 id="vue-cli构建"><a href="#vue-cli构建" class="headerlink" title="vue-cli构建"></a>vue-cli构建</h2><p>但因为国内网络原因，使用 npm 安装某些模块会非常慢。好在淘宝提供了 npm 镜像供我们使用。</p>
-<ol>
-<li>安装 cnpm</li>
-</ol>
+<p>(1). 安装 cnpm</p>
 <p>在命令行输入：</p>
 <p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
-<ol>
-<li>使用 cnpm 安装模块</li>
-</ol>
+<p>(2). 使用 cnpm 安装模块</p>
 <p>cnpm install [name]</p>
 <p>如果你使用vue-cli脚手架来构建vue项目，那么你只需敲击下面几行命令即可生成一个简单的vue项目（前提安装node.js）：<br>安装vue-cli之前，需要先装好vue 和 webpack</p>
 <p>npm install -g vue       //全局安装vue  也可省略</p>
 <p>npm install -g webpack   //全局安装webpack</p>
 <p>npm install -g vue-cli   //全局安装vue-cli</p>
 <p><strong>注意</strong>：上面这些装过一次之后都不需要再安装了</p>
-<ol>
-<li>使用vue-cli构建vue项目</li>
-</ol>
+<p>(3). 使用vue-cli构建vue项目</p>
 <p>vue init webpack my-project</p>
 <p>cd my-project</p>
 <p>npm install</p>
@@ -414,9 +408,7 @@
 <p>npm run dev</p>
 <p>在浏览器打开<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a>，则可以看到欢迎页了。看到这个就说明一切顺利</p>
 <p><img src="https://ooo.0o0.ooo/2017/07/03/5959f223718d7.png" alt="222.png"></p>
-<ol>
-<li>vue-cli生成环境</li>
-</ol>
+<p>(4). vue-cli生成环境</p>
 <p>但是这个只能在本地跑，要如何在我们自己的服务器上访问呢？此时需要执行</p>
 <p>npm run build</p>
 <p>会生成静态文件，在<strong>根目录</strong>的dist里，里面有个index.html，这是服务器访问的路径指定到这里就可以访问我们自己的项目了。</p>
@@ -431,9 +423,7 @@
 <p>然后重新构建一下：</p>
 <p>npm run build</p>
 <p>这样就能正常访问了。</p>
-<ol>
-<li>vue-cli开发环境 关于Cannot GET /的问题</li>
-</ol>
+<p>(5). vue-cli开发环境 关于Cannot GET /的问题</p>
 <p>　　针对开发环境需要注意，一定不要去改asssetsPublicPath里面的内容，也就是这个地方是<strong>不要加点 改成当前目录</strong>的；否则会出Cannot GET 找不到页面的问题；</p>
 <p><img src="https://ooo.0o0.ooo/2017/07/03/5959f223872b2.png" alt="555.png"></p>
 <p>这样的构建方式<strong>其实并不适用于所有项目</strong>，很多文件你的项目可能都不会用到，并且如果你对自动生成的文件一无所知，那么后期维护起来也会非常的吃力。所以这里不推荐新手使用vue-cli构建，而是推荐大家参考vue-cli生成的文件<strong>从零开始构建一个vue项目</strong>。</p>
