@@ -1,0 +1,866 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="构建工具,webpack," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="webpack基本介绍1.webpack基本介绍2.webpack的安装和命令行 在相应文件夹下：npm install webpack –save-dev  打包hello.js文件：webpack hello.js hello.bundle.js   （hello.bundle.js为打包后的文件）  Asset: 打包生成的文件 Size:文件大小 Chunks:打包的分块 Chunk Na">
+<meta name="keywords" content="构建工具,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack学习笔记">
+<meta property="og:url" content="http://yoursite.com/2017/07/15/webpack学习笔记/index.html">
+<meta property="og:site_name" content="单纯的土豆">
+<meta property="og:description" content="webpack基本介绍1.webpack基本介绍2.webpack的安装和命令行 在相应文件夹下：npm install webpack –save-dev  打包hello.js文件：webpack hello.js hello.bundle.js   （hello.bundle.js为打包后的文件）  Asset: 打包生成的文件 Size:文件大小 Chunks:打包的分块 Chunk Na">
+<meta property="og:image" content="https://i.loli.net/2017/07/13/59667270c96f3.png">
+<meta property="og:image" content="https://i.loli.net/2017/07/13/596676e2eacda.png">
+<meta property="og:image" content="https://i.loli.net/2017/07/13/596676e300b33.png">
+<meta property="og:image" content="https://i.loli.net/2017/07/13/59667b3f4ee38.png">
+<meta property="og:image" content="https://i.loli.net/2017/07/13/59667b3f50600.png">
+<meta property="og:image" content="https://i.loli.net/2017/07/13/59667e2096cf1.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5966d6e1588c7.jpeg">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5966d6e1457a1.jpeg">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5966d9d549a19.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5966d92aed7cf.jpeg">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5966dd4da6a1a.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5966dd4da3df2.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5967697c10609.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5967697c44264.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5967697c43294.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/13/5967697c42319.png">
+<meta property="og:updated_time" content="2017-07-15T15:10:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="webpack学习笔记">
+<meta name="twitter:description" content="webpack基本介绍1.webpack基本介绍2.webpack的安装和命令行 在相应文件夹下：npm install webpack –save-dev  打包hello.js文件：webpack hello.js hello.bundle.js   （hello.bundle.js为打包后的文件）  Asset: 打包生成的文件 Size:文件大小 Chunks:打包的分块 Chunk Na">
+<meta name="twitter:image" content="https://i.loli.net/2017/07/13/59667270c96f3.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/15/webpack学习笔记/"/>
+
+
+
+
+
+  <title>webpack学习笔记 | 单纯的土豆</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">单纯的土豆</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">个人技术博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/15/webpack学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liqilong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ooo.0o0.ooo/2017/06/25/594f386858c53.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="单纯的土豆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">webpack学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-15T23:08:05+08:00">
+                2017-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/webpack/" itemprop="url" rel="index">
+                    <span itemprop="name">webpack</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="webpack基本介绍"><a href="#webpack基本介绍" class="headerlink" title="webpack基本介绍"></a>webpack基本介绍</h1><h2 id="1-webpack基本介绍"><a href="#1-webpack基本介绍" class="headerlink" title="1.webpack基本介绍"></a>1.webpack基本介绍</h2><h2 id="2-webpack的安装和命令行"><a href="#2-webpack的安装和命令行" class="headerlink" title="2.webpack的安装和命令行"></a>2.webpack的安装和命令行</h2><ol>
+<li><p>在相应文件夹下：<strong>npm install webpack –save-dev</strong></p>
+</li>
+<li><p>打包hello.js文件：<strong>webpack hello.js hello.bundle.js</strong></p>
+</li>
+</ol>
+<p>（hello.bundle.js为打包后的文件）<br><img src="https://i.loli.net/2017/07/13/59667270c96f3.png" alt="111.png"></p>
+<ul>
+<li>Asset: 打包生成的文件</li>
+<li>Size:文件大小</li>
+<li>Chunks:打包的分块</li>
+<li>Chunk Names:打包的块名称</li>
+</ul>
+<ol>
+<li>webpack天生不支持css文件，需要安装loader：<br><strong>npm install css-loader style-loader –save-dev</strong></li>
+</ol>
+<p><img src="https://i.loli.net/2017/07/13/596676e2eacda.png" alt="222.png"></p>
+<p><img src="https://i.loli.net/2017/07/13/596676e300b33.png" alt="333.png"></p>
+<ol>
+<li><p>css-loader使得webpack可以处理.css文件，style-loader通过css-loader处理完的文件，把处理完的文件新建一个style标签插入到html文档中，当html引入打包后的文件后，改代码会被执行。</p>
+</li>
+<li><p>可以不需要每次在require指定css-loader和style-loader</p>
+</li>
+</ol>
+<p>从而使用module-bind参数</p>
+<p><strong>webpack hello.js hello.bundle.js –module-bind ‘css=style-loader!css-loader’</strong></p>
+<p><img src="https://i.loli.net/2017/07/13/59667b3f4ee38.png" alt="444.png"></p>
+<p><img src="https://i.loli.net/2017/07/13/59667b3f50600.png" alt="555.png"></p>
+<p>6.<br>(1)文件自动改变后自动打包 使用watch参数</p>
+<p><strong>webpack hello.js hello.bundle.js –module-bind ‘css=style-loader!css-loader’ –watch</strong></p>
+<p>(2)看到打包过程 –progress参数</p>
+<p><strong>webpack hello.js hello.bundle.js –module-bind ‘css=style-loader!css-loader’ –progress</strong></p>
+<p>(3)看到打包的模块 –display-modules参数</p>
+<p><strong>webpack hello.js hello.bundle.js –module-bind ‘css=style-loader!css-loader’ –display-modules</strong></p>
+<p>(4)看到打包的原因 –display-reaons参数</p>
+<p><strong>webpack hello.js hello.bundle.js –module-bind ‘css=style-loader!css-loader’ –display-reasons</strong></p>
+<p><img src="https://i.loli.net/2017/07/13/59667e2096cf1.png" alt="666.png"></p>
+<h1 id="webpack基本配置"><a href="#webpack基本配置" class="headerlink" title="webpack基本配置"></a>webpack基本配置</h1><h2 id="1-建立项目的webpack配置文件"><a href="#1-建立项目的webpack配置文件" class="headerlink" title="1.建立项目的webpack配置文件"></a>1.建立项目的webpack配置文件</h2><p>mkdir webpack-demo</p>
+<p>cd webpack-demo</p>
+<p>npm install webpack –save-dev</p>
+<p>npm init</p>
+<p>mkdir src //放代码源文件目录</p>
+<p>mkdir dist //放打包后静态资源的目录</p>
+<p>touch index.html //新建项目的初始化页面</p>
+<p>cd src</p>
+<p>mkdir script //放置脚本文件</p>
+<p>mkdir style  //放置样式文件</p>
+<p>cd webpack-demo</p>
+<p>touch webpack.config.js //建立项目的webpack配置文件</p>
+<h3 id="挖坑填坑1"><a href="#挖坑填坑1" class="headerlink" title="挖坑填坑1"></a>挖坑填坑1</h3><p>webpack.config.js中</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5966d6e1588c7.jpeg" alt="112.jpeg"></p>
+<p>报这样的错误</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5966d6e1457a1.jpeg" alt="111.jpeg"></p>
+<p>原因是：webpack的2.x 版本与webpack的1.x完全不一样，需要require(‘path”)<strong>使用绝对路径</strong> ，在webpack.config.js文件中引入 var path = require(“path”)  然后将output中的<br>path: ‘./dist/js’替换成<br>path: path.resolve(<strong>dirname, ‘./dist/js’),</strong>dirname 前面是两个下划线  它是 node 环境中的变量</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5966d9d549a19.png" alt="114.png"></p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5966d92aed7cf.jpeg" alt="114.jpeg"></p>
+<hr>
+<h3 id="npm中定义多种脚本"><a href="#npm中定义多种脚本" class="headerlink" title="npm中定义多种脚本"></a>npm中定义多种脚本</h3><p>package.json文件中</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5966dd4da6a1a.png" alt="115.png"></p>
+<p>运行npm run webpack命令</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5966dd4da3df2.png" alt="116.png"></p>
+<h2 id="2-webpack配置的entry和output-new"><a href="#2-webpack配置的entry和output-new" class="headerlink" title="2.webpack配置的entry和output new"></a>2.webpack配置的entry和output new</h2><h3 id="挖坑填坑2"><a href="#挖坑填坑2" class="headerlink" title="挖坑填坑2"></a>挖坑填坑2</h3><p>2.0版本直接合并会报错“Conflict: Multiple assets emit to the same filename bundle.js<br>”，但是文件依然会生成。官方给出的标准是两个文件打包后还是两个文件，并不进行合并。</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5967697c10609.png" alt="117.png"><br><img src="https://ooo.0o0.ooo/2017/07/13/5967697c44264.png" alt="118.png"></p>
+<p>解决：filename修改如下</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5967697c43294.png" alt="119.png"></p>
+<p><img src="https://ooo.0o0.ooo/2017/07/13/5967697c42319.png" alt="120.png"></p>
+<h3 id="filename区别"><a href="#filename区别" class="headerlink" title="filename区别"></a>filename区别</h3><ol>
+<li><p>[name].js<br>生成的是源文件名称的两个文件夹</p>
+</li>
+<li><p>[name] - [hash].js<br>打包后的文件名就是源文件名加上hash值</p>
+</li>
+</ol>
+<p>源Hash: 6ed8fcb869f32b6d0cf6</p>
+<p>生成的是main-6ed8fcb869f32b6d0cf6.js</p>
+<p><strong>注意的是</strong> 这个hash值和文件名hash值相对</p>
+<ol>
+<li>[name] -[chunkhash].js</li>
+</ol>
+<p>和上面一样 生成的文件名就是源文件名加上hash</p>
+<p><strong>唯一不同的是</strong></p>
+<p>文件名的hash值和生成的hash值不一样</p>
+<p>源Hash: 18a8a031019648cb4892</p>
+<p>生成的是main-739dc04ca19361abc6a7.js</p>
+<h1 id="生成项目中的html文件"><a href="#生成项目中的html文件" class="headerlink" title="生成项目中的html文件"></a>生成项目中的html文件</h1><h2 id="自动化生成项目中的HTML页面"><a href="#自动化生成项目中的HTML页面" class="headerlink" title="自动化生成项目中的HTML页面"></a>自动化生成项目中的HTML页面</h2><p>npm install html-webpack-plugin –save-dev</p>
+<h1 id="处理项目中的资源文件"><a href="#处理项目中的资源文件" class="headerlink" title="处理项目中的资源文件"></a>处理项目中的资源文件</h1><h2 id="1-什么是Loader以及Loader的特性"><a href="#1-什么是Loader以及Loader的特性" class="headerlink" title="1.什么是Loader以及Loader的特性"></a>1.什么是Loader以及Loader的特性</h2><h2 id="2-使用babel-loader转换ES6代码（上）"><a href="#2-使用babel-loader转换ES6代码（上）" class="headerlink" title="2.使用babel-loader转换ES6代码（上）"></a>2.使用babel-loader转换ES6代码（上）</h2><p>npm install –save-dev babel-loader babel-core</p>
+<p>npm install –save-dev babel-preset-latest</p>
+<h3 id="挖坑填坑3"><a href="#挖坑填坑3" class="headerlink" title="挖坑填坑3"></a>挖坑填坑3</h3><p>webpack版本1.X与2.X有很大不同，</p>
+<ol>
+<li>版本更新的话，Loader可以改成loader: ‘babel-loader’</li>
+</ol>
+<p>即在webpack.config.js里面，向loader传参不在使用query，而是使用options<br>{test: ‘/.js$/‘, loader: ‘babel-loader’, options: {‘presets’: [‘env’]}} （-loader不可以省略）</p>
+<ol>
+<li><p>另外如果是在.babelrc文件中配置的话，千万不要给.babelrc文件添加诸如js, json的后缀名，这个文件没有后缀，切记！切记！</p>
+</li>
+<li><p>安装方法 npm install babel-loader babel-core babel-preset-env webpack –save-dev</p>
+</li>
+<li><p>所以后面的参数’由presets: [‘latest’]相对于的变成了presets: [‘env’]</p>
+</li>
+<li><p>官方并没有废弃query 也没有指明options是新参数 实际测试两种方法都可以 生成结果也一模一样</p>
+</li>
+<li><p>loader: ‘babel-loader’才能被识别</p>
+</li>
+<li><p>include和exclude需要相对路径，所以include:<strong>dirname +’./src/‘ 加前缀</strong>dirname</p>
+</li>
+<li><p>babel-loader官网表示 { “presets”: [“latest”] } === { “presets”: [“env”] }</p>
+</li>
+</ol>
+<hr>
+<h2 id="3-处理项目中的CSS"><a href="#3-处理项目中的CSS" class="headerlink" title="3.处理项目中的CSS"></a>3.处理项目中的CSS</h2><p>npm install postcss-loader –save-dev</p>
+<p>npm install autoprefixer –save-dev</p>
+<h2 id="4-使用less和sass"><a href="#4-使用less和sass" class="headerlink" title="4.使用less和sass"></a>4.使用less和sass</h2><p>npm install less –save-dev</p>
+<p>npm install less-loader –save-dev</p>
+<p><strong>sass-loader依赖node-sass</strong></p>
+<p>npm install node-sass –save-dev</p>
+<p>npm install sass-loader –save-dev</p>
+<h2 id="5-处理模板文件"><a href="#5-处理模板文件" class="headerlink" title="5.处理模板文件"></a>5.处理模板文件</h2><p>npm install html-loader –save-dev</p>
+<h2 id="6-处理图片以及其他文件"><a href="#6-处理图片以及其他文件" class="headerlink" title="6.处理图片以及其他文件"></a>6.处理图片以及其他文件</h2><p>npm install file-loader –save-dev</p>
+<p>npm install url-loader –save-dev</p>
+<hr>
+<p><a href="https://github.com/liqilong199126/webpack-learning-demo" target="_blank" rel="external"><strong>相关代码</strong></a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/构建工具/" rel="tag"># 构建工具</a>
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/13/YAHOO军规/" rel="next" title="YAHOO军规">
+                <i class="fa fa-chevron-left"></i> YAHOO军规
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://ooo.0o0.ooo/2017/06/25/594f386858c53.jpg"
+               alt="liqilong" />
+          <p class="site-author-name" itemprop="name">liqilong</p>
+           
+              <p class="site-description motion-element" itemprop="description">kill the boy ，let the man be born.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack基本介绍"><span class="nav-number">1.</span> <span class="nav-text">webpack基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-webpack基本介绍"><span class="nav-number">1.1.</span> <span class="nav-text">1.webpack基本介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-webpack的安装和命令行"><span class="nav-number">1.2.</span> <span class="nav-text">2.webpack的安装和命令行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#webpack基本配置"><span class="nav-number">2.</span> <span class="nav-text">webpack基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-建立项目的webpack配置文件"><span class="nav-number">2.1.</span> <span class="nav-text">1.建立项目的webpack配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#挖坑填坑1"><span class="nav-number">2.1.1.</span> <span class="nav-text">挖坑填坑1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#npm中定义多种脚本"><span class="nav-number">2.1.2.</span> <span class="nav-text">npm中定义多种脚本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-webpack配置的entry和output-new"><span class="nav-number">2.2.</span> <span class="nav-text">2.webpack配置的entry和output new</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#挖坑填坑2"><span class="nav-number">2.2.1.</span> <span class="nav-text">挖坑填坑2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filename区别"><span class="nav-number">2.2.2.</span> <span class="nav-text">filename区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成项目中的html文件"><span class="nav-number">3.</span> <span class="nav-text">生成项目中的html文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化生成项目中的HTML页面"><span class="nav-number">3.1.</span> <span class="nav-text">自动化生成项目中的HTML页面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#处理项目中的资源文件"><span class="nav-number">4.</span> <span class="nav-text">处理项目中的资源文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是Loader以及Loader的特性"><span class="nav-number">4.1.</span> <span class="nav-text">1.什么是Loader以及Loader的特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-使用babel-loader转换ES6代码（上）"><span class="nav-number">4.2.</span> <span class="nav-text">2.使用babel-loader转换ES6代码（上）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#挖坑填坑3"><span class="nav-number">4.2.1.</span> <span class="nav-text">挖坑填坑3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-处理项目中的CSS"><span class="nav-number">4.3.</span> <span class="nav-text">3.处理项目中的CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-使用less和sass"><span class="nav-number">4.4.</span> <span class="nav-text">4.使用less和sass</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-处理模板文件"><span class="nav-number">4.5.</span> <span class="nav-text">5.处理模板文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-处理图片以及其他文件"><span class="nav-number">4.6.</span> <span class="nav-text">6.处理图片以及其他文件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liqilong</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
