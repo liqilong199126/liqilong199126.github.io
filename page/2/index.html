@@ -276,6 +276,160 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/25/git使用中的总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liqilong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ooo.0o0.ooo/2017/06/25/594f386858c53.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="单纯的土豆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/25/git使用中的总结/" itemprop="url">git使用中的总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T12:28:04+08:00">
+                2017-06-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="一张图掌握Git"><a href="#一张图掌握Git" class="headerlink" title="一张图掌握Git"></a>一张图掌握Git</h4><p><img src="https://ooo.0o0.ooo/2017/02/22/58ad55292d450.png" alt="一张图掌握Git.png"></p>
+<h4 id="Git-Bash常用命令"><a href="#Git-Bash常用命令" class="headerlink" title="Git Bash常用命令"></a>Git Bash常用命令</h4><hr>
+<p><img src="https://ooo.0o0.ooo/2017/02/17/58a6ccd0e7e73.png" alt=""></p>
+<h4 id="修改git-commit-最后一次提交的注释信息-以及如何退出git-bash-vim编辑器"><a href="#修改git-commit-最后一次提交的注释信息-以及如何退出git-bash-vim编辑器" class="headerlink" title="修改git commit 最后一次提交的注释信息 以及如何退出git bash vim编辑器"></a>修改git commit 最后一次提交的注释信息 以及如何退出git bash vim编辑器</h4><hr>
+<p>今天用<code>git commit -m “注释”</code>提交的时候，注释写错了</p>
+<p>首先 使用 <code>git commit --amend</code> 命令，（修改最近一次提交的注释信息），会进入到vim 编辑器</p>
+<p>然后 你会发现编辑器里你怎么输入都没反应，这是因为vim处在不可编辑状态，<strong>按下字母键 c，此时进入编辑状态，可以开始修改注释信息了</strong></p>
+<p>在然后 你会发现你怎么都退出不了，回到shell了，然后操作如下： <strong>ESC  –》 退出编辑状态；接着 连续按两次大写字母键 Z</strong>，接着你会惊喜的发现，终于保存好退出来了！</p>
+<h4 id="平常工作这套流程常用git命令"><a href="#平常工作这套流程常用git命令" class="headerlink" title="平常工作这套流程常用git命令"></a>平常工作这套流程常用git命令</h4><hr>
+<p><code>git status</code> 查看修改状态  —&gt; <code>git add</code> 修改的文件名—&gt; <code>git diff –cached</code> 查看修改点—&gt; <code>git commit –m “提交注释”</code>—&gt;<code>git pull –rebase</code> —&gt;若冲突，解决冲突，<code>git add 冲突文件</code>，<code>git rebase –continue</code>—&gt;<code>git push</code></p>
+<h4 id="一些参考贴"><a href="#一些参考贴" class="headerlink" title="一些参考贴"></a>一些参考贴</h4><hr>
+<ul>
+<li><p><a href="https://blog.coding.net/blog/about-git" target="_blank" rel="external"><strong>关于 Git 你需要知道的一些事情</strong></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/feff72fd24fa" target="_blank" rel="external"><strong>git使用小结</strong></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/04a6517869b4" target="_blank" rel="external"><strong>git介绍以及一些常用命令，加上vim编辑器的简单使用</strong></a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/8e2a86d8f223" target="_blank" rel="external"><strong>常用的git命令—你知道哪些？（纯干货）</strong></a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/24/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -436,7 +590,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -458,7 +612,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
