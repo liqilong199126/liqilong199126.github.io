@@ -276,6 +276,226 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/21/Less学习简单总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liqilong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ooo.0o0.ooo/2017/06/25/594f386858c53.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="单纯的土豆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/21/Less学习简单总结/" itemprop="url">Less学习简单总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T20:08:37+08:00">
+                2017-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Less/" itemprop="url" rel="index">
+                    <span itemprop="name">Less</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="say-hello-amp-intro"><a href="#say-hello-amp-intro" class="headerlink" title="say hello &amp; intro"></a>say hello &amp; intro</h1><ul>
+<li>Less is More,Than CSS-少即是多，比CSS<h2 id="less介绍-say-hello"><a href="#less介绍-say-hello" class="headerlink" title="less介绍-say hello"></a>less介绍-say hello</h2></li>
+</ul>
+<h3 id="Less是什么？"><a href="#Less是什么？" class="headerlink" title="Less是什么？"></a>Less是什么？</h3><p> <strong>Less 类似于Jquery</strong></p>
+<ul>
+<li>LESSCSS是一种动态样式语言，属于CSS预处理语言的一种，它使用类似CSS的语法，为CSS的赋予了动态语言的特性，如变量、继承、运算、函数等，更方便CSS的编写和维护。</li>
+<li>LESSCSS可以在多种语言、环境中使用，包括浏览器端、桌面客户端、服务端。</li>
+</ul>
+<h1 id="Koala的基本使用"><a href="#Koala的基本使用" class="headerlink" title="Koala的基本使用"></a>Koala的基本使用</h1><h2 id="koala编译"><a href="#koala编译" class="headerlink" title="koala编译"></a>koala编译</h2><ul>
+<li>Koala</li>
+<li>国人开发的LESS/SASS编译工具。</li>
+<li>下载地址：<a href="http://koala-app.com/index-zh.html" target="_blank" rel="external"><strong>http://koala-app.com/index-zh.html</strong></a></li>
+</ul>
+<h2 id="Node-js库编译"><a href="#Node-js库编译" class="headerlink" title="Node.js库编译"></a>Node.js库编译</h2><ul>
+<li>npm install -g less</li>
+<li>lessc test.less &gt; test.css（注意less文件与css文件路径）<h2 id="浏览器端编译"><a href="#浏览器端编译" class="headerlink" title="浏览器端编译"></a>浏览器端编译</h2></li>
+</ul>
+<h1 id="Less语法详解"><a href="#Less语法详解" class="headerlink" title="Less语法详解"></a>Less语法详解</h1><h2 id="Less注释"><a href="#Less注释" class="headerlink" title="Less注释"></a>Less注释</h2><p>less代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/*我是被编译的*/</div><div class="line"></div><div class="line">//不会被编译</div></pre></td></tr></table></figure>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/*我是被编译的*/</div></pre></td></tr></table></figure>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>less中想要声明变量的话 一定要用@开头 例如： @变量名：值；</li>
+</ul>
+<p>less代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//变量</div><div class="line"></div><div class="line">@test_width:300px;</div><div class="line"></div><div class="line">.body&#123;</div><div class="line">  width:@test_width;</div><div class="line">  height:@test_width;</div><div class="line">  background-color: yellow;</div><div class="line"></div><div class="line">  .border;</div><div class="line"></div><div class="line">  left:100px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.body &#123;</div><div class="line">  width: 300px;</div><div class="line">  height: 300px;</div><div class="line">  background-color: yellow;</div><div class="line">  border: 5px solid pink;</div><div class="line">  left: 100px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h2><h3 id="混合-mixin-变量"><a href="#混合-mixin-变量" class="headerlink" title="混合(mixin)变量"></a>混合(mixin)变量</h3><p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.border&#123;border:solid 10px red;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="带参数的混合"><a href="#带参数的混合" class="headerlink" title="带参数的混合"></a>带参数的混合</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.border-radius (@radius) &#123;css代码&#125;</div></pre></td></tr></table></figure>
+<p>可设定默认值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">border-radius(@radius:5px)&#123;css代码&#125;</div></pre></td></tr></table></figure>
+<h3 id="简单例子"><a href="#简单例子" class="headerlink" title="简单例子"></a>简单例子</h3><p>less 代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">.body&#123;</div><div class="line">  width:@test_width;</div><div class="line">  height:@test_width;</div><div class="line">  background-color: yellow;</div><div class="line"></div><div class="line">  .border;</div><div class="line"></div><div class="line">  left:100px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//混合</div><div class="line"></div><div class="line">.border&#123;</div><div class="line">  border:5px solid pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.body &#123;</div><div class="line">  width: 300px;</div><div class="line">  height: 300px;</div><div class="line">  background-color: yellow;</div><div class="line">  border: 5px solid pink;</div><div class="line">  left: 100px;</div><div class="line">&#125;</div><div class="line">.border &#123;</div><div class="line">  border: 5px solid pink;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="复杂例子"><a href="#复杂例子" class="headerlink" title="复杂例子"></a>复杂例子</h3><p>less代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">//混合 - 可带参数的</div><div class="line"></div><div class="line">.border_02(@border_width)&#123;</div><div class="line">  border: solid yellow @border_width;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.test_hunhe&#123;</div><div class="line">  .border_02(30px);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//混合 - 默认带值</div><div class="line">.border_03(@border_width:10px)&#123;</div><div class="line">  border:solid green @border_width;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.test_hunhe_03&#123;</div><div class="line">  .border_03();</div><div class="line">&#125;</div><div class="line"></div><div class="line">.test_hunhe_03&#123;</div><div class="line">  .border_03(50px);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//混合的例子</div><div class="line"></div><div class="line">.border_radius(@radius:5px)&#123;</div><div class="line">  -webkit-border-radius: @radius;</div><div class="line">  -moz-border-radius: @radius;</div><div class="line">  border-radius: @radius;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.radius_test&#123;</div><div class="line">  width:100px;</div><div class="line">  height:40px;</div><div class="line">  background-color: green;</div><div class="line"></div><div class="line">  .border_radius();</div><div class="line">&#125;</div><div class="line"></div><div class="line">.sanjiao&#123;</div><div class="line">  .triangle(top,100px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">.test_hunhe &#123;</div><div class="line">  border: solid yellow 30px;</div><div class="line">&#125;</div><div class="line">.test_hunhe_03 &#123;</div><div class="line">  border: solid green 10px;</div><div class="line">&#125;</div><div class="line">.test_hunhe_03 &#123;</div><div class="line">  border: solid green 50px;</div><div class="line">&#125;</div><div class="line">.radius_test &#123;</div><div class="line">  width: 100px;</div><div class="line">  height: 40px;</div><div class="line">  background-color: green;</div><div class="line">  -webkit-border-radius: 5px;</div><div class="line">  -moz-border-radius: 5px;</div><div class="line">  border-radius: 5px;</div><div class="line">&#125;</div><div class="line">.sanjiao &#123;</div><div class="line">  width: 0;</div><div class="line">  height: 0;</div><div class="line">  overflow: hidden;</div><div class="line">  border-width: 10px;</div><div class="line">  border-color: transparent transparent red transparent;</div><div class="line">  border-style: dashed dashed solid dashed;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="匹配模式"><a href="#匹配模式" class="headerlink" title="匹配模式"></a>匹配模式</h2><ul>
+<li>相当于JS中的if(但不完全是)</li>
+<li>满足条件后才能匹配</li>
+</ul>
+<p>less代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">//匹配模式</div><div class="line">.triangle(top,@w:5px,@c:#ccc)&#123;</div><div class="line">    border-width: @w;</div><div class="line">    border-color: transparent transparent @c transparent;</div><div class="line">    border-style: dashed dashed solid dashed;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.triangle(bottom,@w:5px,@c:#ccc)&#123;</div><div class="line">  border-width: @w;</div><div class="line">  border-color: @c transparent transparent transparent;</div><div class="line">  border-style: solid dashed dashed dashed;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.triangle(left,@w:5px,@c:#ccc)&#123;</div><div class="line">  border-width: @w;</div><div class="line">  border-color: transparent @c transparent transparent;</div><div class="line">  border-style: dashed solid dashed dashed;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.triangle(right,@w:5px,@c:#ccc)&#123;</div><div class="line">  border-width:@w;</div><div class="line">  border-color:transparent transparent transparent @c;</div><div class="line">  border-style: dashed dashed dashed solid;</div><div class="line">&#125;</div><div class="line">.sanjiao&#123;</div><div class="line">  .triangle(top,100px);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//匹配模式 - 定位</div><div class="line">.pos(r)&#123;</div><div class="line">  position:relative;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.pos(a)&#123;</div><div class="line">  position:absolute;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.pos(f)&#123;</div><div class="line">  position:fixed;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.pipe&#123;</div><div class="line">  width:200px;</div><div class="line">  height:200px;</div><div class="line">  background-color: green;</div><div class="line">  .pos(r);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.sanjiao &#123;</div><div class="line">  border-width: 100px;</div><div class="line">  border-color: transparent transparent #ccc transparent;</div><div class="line">  border-style: dashed dashed solid dashed;</div><div class="line">&#125;</div><div class="line">.pipe &#123;</div><div class="line">  width: 200px;</div><div class="line">  height: 200px;</div><div class="line">  background-color: green;</div><div class="line">  position: relative;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><ul>
+<li>任何数字，颜色或者变量都可以参与运算，运算应该可以包裹在括号中。例如==：+ - * /==</li>
+</ul>
+<p>less代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//运算</div><div class="line"></div><div class="line">@test_01:300px;</div><div class="line"></div><div class="line">.box_02&#123;</div><div class="line">  width:@test_01 + 20;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box_02 &#123;</div><div class="line">  width: 320px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="嵌套规则"><a href="#嵌套规则" class="headerlink" title="嵌套规则"></a>嵌套规则</h2><ul>
+<li>Less中最有意思的小东西</li>
+<li>两种用法</li>
+</ul>
+<p>（1）&amp;对尾类使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">focus</div></pre></td></tr></table></figure></p>
+<p>（2）对连接的使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">less代码</div></pre></td></tr></table></figure></p>
+<p>//嵌套规则</p>
+<p>/<em><br>.list{}<br>.list li{}<br>.list a{}<br>.list span{}
+</em>/</p>
+<p>.list{<br>  width:600px;<br>  margin:30px auto;<br>  padding:0;<br>  list-style:none;</p>
+<p>  li{<br>    height: 30px;<br>    line-height: 30px;<br>    background-color: pink;<br>    margin-bottom: 5px;<br>    padding:0 10px;<br>  }<br>  a{<br>    float:left;<br>    //&amp;代表他的上一层选择器<br>    &amp;:hover{<br>      color:red;<br>    }<br>  }<br>  span{<br>    float:right;<br>  }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">css代码</div></pre></td></tr></table></figure></p>
+<p>/<em><br>.list{}<br>.list li{}<br>.list a{}<br>.list span{}
+</em>/<br>.list {<br>  width: 600px;<br>  margin: 30px auto;<br>  padding: 0;<br>  list-style: none;<br>}<br>.list li {<br>  height: 30px;<br>  line-height: 30px;<br>  background-color: pink;<br>  margin-bottom: 5px;<br>  padding: 0 10px;<br>}<br>.list a {<br>  float: left;<br>}<br>.list a:hover {<br>  color: red;<br>}<br>.list span {<br>  float: right;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">## @arguments变量</div><div class="line"></div><div class="line">- @arguments包含了所有传递进来的参数</div><div class="line">- 如果你不想单独处理每一个参数的话就可以像这样写：</div><div class="line"></div><div class="line"></div><div class="line">less代码</div></pre></td></tr></table></figure></p>
+<p>.border_arg(@w:30px,@c:red,@xx:solid){<br>  border:@arguments;  //相当于传入所有变量:border:@w @c @xx;<br>}</p>
+<p>.test_arguments{<br>  .border_arg(40px);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">css代码</div></pre></td></tr></table></figure></p>
+<p>.test_arguments {<br>  border: 40px red solid;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">## 避免编译，！important以及总结</div><div class="line"></div><div class="line">### 避免编译</div><div class="line"></div><div class="line">- 有时候我们需要输出一些不正确的CSS语法或者使用一些Less不认识的专有语法。</div><div class="line">- 要输出这样的值我们可以在字符串</div><div class="line">前面加上一个```~```例如：```width:~&apos;calc(100%-35)&apos;</div></pre></td></tr></table></figure></p>
+<p>less代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">//避免编译</div><div class="line"></div><div class="line">.test_03&#123;</div><div class="line">  width:~&apos;calc(300px - 30px)&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.test_03 &#123;</div><div class="line">  width: calc(300px - 30px);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="important关键字"><a href="#important关键字" class="headerlink" title="!important关键字"></a>!important关键字</h3><ul>
+<li>会为所有混合所带来的样式，添加上!important</li>
+</ul>
+<p>less代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//!important</div><div class="line">.border_radius(@radius:5px)&#123;</div><div class="line">  -webkit-border-radius: @radius;</div><div class="line">  -moz-border-radius: @radius;</div><div class="line">  border-radius: @radius;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.test_important&#123;</div><div class="line">  .border_radius()!important;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>css代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.test_important &#123;</div><div class="line">  -webkit-border-radius: 5px !important;</div><div class="line">  -moz-border-radius: 5px !important;</div><div class="line">  border-radius: 5px !important;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="简单实战项目"><a href="#简单实战项目" class="headerlink" title="简单实战项目"></a>简单实战项目</h1><p><img src="https://i.loli.net/2017/07/21/5971ed640db2a.png" alt="Snip20170721_54.png"></p>
+<p><a href="https://github.com/liqilong199126/Less/tree/master/Less_demo" target="_blank" rel="external"><strong>项目代码</strong></a></p>
+<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><h2 id="Less中文网站"><a href="#Less中文网站" class="headerlink" title="Less中文网站"></a>Less中文网站</h2><p><a href="http://lesscss.net/" target="_blank" rel="external"><strong>http://lesscss.net/</strong></a></p>
+<p>如果看不懂英文的，可以访问less中文旧版网站</p>
+<p><a href="http://old.lesscss.net/article/document.html" target="_blank" rel="external"><strong>http://old.lesscss.net/article/document.html</strong></a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/16/浅谈搜索引擎SEO/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2047,191 +2267,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/25/SEO在网页制作中的应用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liqilong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://ooo.0o0.ooo/2017/06/25/594f386858c53.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="单纯的土豆">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/25/SEO在网页制作中的应用/" itemprop="url">SEO在网页制作中的应用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-25T12:31:25+08:00">
-                2017-06-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SEO/" itemprop="url" rel="index">
-                    <span itemprop="name">SEO</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>SEO = Search Engine Optimization</p>
-<h2 id="1-SEO基本介绍"><a href="#1-SEO基本介绍" class="headerlink" title="1.SEO基本介绍"></a>1.SEO基本介绍</h2><h3 id="搜索引擎工作原理"><a href="#搜索引擎工作原理" class="headerlink" title="搜索引擎工作原理"></a>搜索引擎工作原理</h3><ol>
-<li>搜索引擎数据库</li>
-<li>爬虫蜘蛛</li>
-<li>搜索结果（排列）</li>
-<li>白帽SEO与黑帽SEO</li>
-</ol>
-<h3 id="白帽SEO"><a href="#白帽SEO" class="headerlink" title="白帽SEO"></a>白帽SEO</h3><ol>
-<li>网站标题，关键字， 描述</li>
-<li>网站内容优化</li>
-<li>Robot.txt文件</li>
-<li>网站地图</li>
-<li>增加外链引用</li>
-</ol>
-<h2 id="2-前端工程师与SEO"><a href="#2-前端工程师与SEO" class="headerlink" title="2.前端工程师与SEO"></a>2.前端工程师与SEO</h2><h3 id="网站布局结构优化"><a href="#网站布局结构优化" class="headerlink" title="网站布局结构优化"></a>网站布局结构优化</h3><p><strong>1. 偏平化结构</strong>（层次结构超过三层小蜘蛛就不愿意爬了）</p>
-<ul>
-<li><strong>控制首页链接数量</strong>（中小网站100以内，页面导航、底部导航、锚文字链接等）</li>
-<li><strong>扁平化的目录层次</strong>（小蜘蛛跳转3次可以到达网站内任何一个内页，网站的设计主页、栏目、内容页，不要用纵线性的结构）</li>
-<li><strong>导航seo优化</strong>（头部、底部、内容部分，主导航、副导航、分类导航，尽量用文字，面包屑导航，在每个网站上留下面包屑，使用户可以了解网站组织形式，放于正文的左上方）</li>
-</ul>
-<p><strong>2. 面包屑导航</strong>（一个次级导航，层次关系明确。让用户了解当前所处位置、使用户可以了解网站组织形式。）</p>
-<p><strong>3. 页面大小</strong>（不超过100K）</p>
-<p><strong>4. 不可忽略的细节</strong></p>
-<ul>
-<li><img src="https://ooo.0o0.ooo/2017/06/24/594e41ad277c5.png" alt="Snip20170624_5.png"></li>
-<li><img src="https://ooo.0o0.ooo/2017/06/24/594e41c8d1bc8.png" alt="Snip20170624_7.png"></li>
-</ul>
-<h3 id="网站代码优化"><a href="#网站代码优化" class="headerlink" title="网站代码优化"></a>网站代码优化</h3><ol>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">**标题** （把重要的关键词放在前面，不要重复出现。每个页面的title不要设置相同的。）</div><div class="line"></div><div class="line">2. ```&lt;meta keywords&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>关键词</strong> （写出几个重要的关键词即可，不需要过多的堆砌。）</p>
-<ol>
-<li><p><code>&lt;meta description&gt;</code><br><strong>网页描述</strong> 高度概括网页的内容，长度适中，每个页面也要有所不同。</p>
-</li>
-<li><p><code>&lt;img&gt;</code>标签应使用<code>alt</code>说明。</p>
-</li>
-<li><p><strong>语义化代码</strong> 在适当的位置用适当的标签。用<code>&lt;strong&gt;</code>，<code>&lt;em&gt;</code>而不用<code>&lt;b&gt;</code>，<code>&lt;i&gt;</code>。</p>
-</li>
-<li><p>重要内容HTML代码放在最前面。</p>
-</li>
-<li><p><code>&lt;br&gt;</code>标签只用于文本内容的换行。</p>
-</li>
-<li><p>重要内容不要使用JS输出。</p>
-</li>
-<li><p>尽少使用<code>iframe</code> 框架。</p>
-</li>
-<li><p>谨慎使用<code>display:none;</code>,可以使用 <code>text-indent</code>等来代替。</p>
-</li>
-<li><p>尽量精简代码。</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -2281,7 +2316,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2292,7 +2327,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2303,7 +2338,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
